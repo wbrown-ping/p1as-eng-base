@@ -64,7 +64,7 @@ class TestPDReplicationLogs(unittest.TestCase):
         _log(f"Deleting {PD_POD_1} to trigger disconnect/reconnect events on {PD_POD}...")
         cls.k8s.kill_pods(label=PD_LABEL_1, namespace=PD_NS)
 
-        _log(f"Waiting for {PD_POD_1} to be ready (timeout 180s)...")
+        _log(f"Waiting for {PD_POD_1} to be ready (timeout 240s)...")
         time.sleep(5)
         ready = cls.k8s.wait_for_all_pods_ready(label=PD_LABEL_1, namespace=PD_NS, timeout_seconds=240)
         _log(f"{PD_POD_1} ready: {ready}")
