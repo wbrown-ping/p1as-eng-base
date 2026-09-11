@@ -20,9 +20,6 @@ SKIP_TEMPLATES = {"general", "logstash"}
 # Fields known to be missing from specific index templates pending a fix.
 # Remove entries once the corresponding template is updated.
 KNOWN_MISSING_FIELDS = {
-    "pds-errors": {"vm.swappiness"},
-    "pds-server": {"class", "id"},
-    "ingress-access": {"log"},
 }
 
 # OS adds these metadata fields to every document at index time; they are not
