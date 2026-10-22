@@ -1,4 +1,4 @@
-"""Black-box pod priority tier test (PDO-12385).
+"""Black-box pod priority tier test.
 
 Asserts the priority-tier contract against a live cluster using only
 workload pod-template specs and PriorityClass objects. Class names are
