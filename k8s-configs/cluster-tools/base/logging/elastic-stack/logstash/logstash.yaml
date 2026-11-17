@@ -133,6 +133,8 @@ spec:
               mountPath: /usr/share/opensearch/data/dashboards/pa
             - name: os-dashboards-pa-was
               mountPath: /usr/share/opensearch/data/dashboards/pa-was
+            - name: os-dashboards-json-parse-failures
+              mountPath: /usr/share/opensearch/data/dashboards/json-parse-failures
         - name: create-enrichment-cache-files
           securityContext:
             runAsNonRoot: true
@@ -408,6 +410,9 @@ spec:
         - name: os-dashboards-pa-was
           configMap:
             name: os-dashboards-pa-was
+        - name: os-dashboards-json-parse-failures
+          configMap:
+            name: os-dashboards-json-parse-failures
   serviceName: logstash-elastic
   volumeClaimTemplates:
     - metadata:
